@@ -1,15 +1,16 @@
 import React from 'react';
-import JobCard from './components/JobCard';
+import Jobs from './components/Jobs';
 import Filter from './components/Filter';
 import Footer from './components/Footer';
-
 
 function App() {
   return (
     <>
+
       <Filter />
-      <JobCard />
+      <Jobs />
       <Footer />
+
     </>
   );
 }
