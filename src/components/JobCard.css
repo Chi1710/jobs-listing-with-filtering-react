@@ -1,0 +1,45 @@
+.job-card {
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  border-left: 4px solid rgb(91,164,164);
+  padding: 10px;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-company {
+  display: flex;
+  gap: 15px;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: rgb(91,164,164);
+}
+.label {
+  background-color:  rgb(91,164,164);
+  font-size: 0.6rem;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.featured {
+  background-color:rgb(44,58,58) ;
+}
+.job-position {
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.job-position:hover {
+  color:  rgb(91,164,164);
+}
