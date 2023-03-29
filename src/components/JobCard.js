@@ -20,7 +20,25 @@ const JobCard = ( {job} ) => {
         </ul>
         <div className="horizontal-line"></div>
       </div>
-      <div className="filter">filters here</div>
+      <div className="filter-tags">
+        <button className="filter-tag" type="button">
+          {job.role}
+        </button>
+        <button className="filter-tag" type="button">
+          {job.level}
+        </button>
+        {job.languages.map((language, index) => (
+          <button className="filter-tag" type="button">
+            {language}
+          </button>
+        ))}
+        {job.tools &&
+          job.tools.map((tool, index) => (
+            <button className="filter-tag" type="button">
+              {tool}
+            </button>
+          ))}
+      </div>
     </div>
   )
 }

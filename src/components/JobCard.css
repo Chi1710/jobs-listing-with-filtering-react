@@ -28,6 +28,7 @@
   font-size: 1rem;
   color: rgb(91,164,164);
 }
+
 .label {
   background-color:  rgb(91,164,164);
   font-size: 0.6rem;
@@ -39,6 +40,7 @@
 .featured {
   background-color:rgb(44,58,58) ;
 }
+
 .job-position {
     font-weight: 700;
     font-size: 1.2rem;
@@ -68,6 +70,28 @@
   background-color: rgb(125,143,144);
 }
 
+.filter-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-tag {
+  border: none;
+ background-color: rgb(238,246,246);
+ color:  rgb(91,164,164);
+ font-family: 'Spartan', sans-serif;
+ border-radius: 5px;
+ padding: 8px;
+ max-height: 40px;
+}
+
+.filter-tag:hover {
+  color:  rgb(238,246,246);
+  background-color:  rgb(91,164,164)
+}
+
 @media (min-width: 768px) {
 .job-card {
   display: flex;
@@ -77,9 +101,20 @@
 .horizontal-line {
   display: none;
 }
+
 .logo {
   width: 80px;
   height: 80px;
   margin-top: 2%;
+}
+}
+@media (min-width: 1000px) {
+  .filter-tags {
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.job-card {
+  width: 60%;
 }
 }
