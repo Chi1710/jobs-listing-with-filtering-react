@@ -79,12 +79,12 @@
 
 .filter-tag {
   border: none;
- background-color: rgb(238,246,246);
- color:  rgb(91,164,164);
- font-family: 'Spartan', sans-serif;
- border-radius: 5px;
- padding: 8px;
- max-height: 40px;
+  background-color: rgb(238,246,246);
+  color:  rgb(91,164,164);
+  font-family: 'Spartan', sans-serif;
+  border-radius: 5px;
+  padding: 8px;
+  max-height: 40px;
 }
 
 .filter-tag:hover {
@@ -93,7 +93,13 @@
 }
 
 @media (min-width: 768px) {
-.job-card {
+  .container-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .job-card {
   display: flex;
   gap: 20px;
 }
@@ -107,14 +113,33 @@
   height: 80px;
   margin-top: 2%;
 }
+
+ .filter-tags {
+  max-width: 300px;
+    margin-left: 50px;
+    justify-content: end;
+    align-items: start;
 }
+
 @media (min-width: 1000px) {
-  .filter-tags {
-  margin-left: 100px;
-  justify-content: center;
-  align-items: center;
-}
 .job-card {
+  width: 70%;
+}
+ .container-div {
+   gap:50px;
+   width: 100%;
+  }
+
+@media (min-width: 1400px) {
+  .job-card {
   width: 60%;
+}
+.filter-tags {
+  max-width: 200px;
+    margin-left: 50px;
+    justify-content: end;
+    align-items: end;
+}
+}
 }
 }
