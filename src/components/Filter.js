@@ -3,7 +3,7 @@ import "./Filter.css"
 
 const Filter = () => {
   return (
-    <div>Filter</div>
+    <div></div>
   )
 }
 

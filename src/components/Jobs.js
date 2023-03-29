@@ -31,13 +31,12 @@ const Jobs = () => {
 
   return (
     <>
-    <h1>Jobs</h1>
-    {jobs.map( (job) => (
-      <JobCard key={job.id}
-                job={job} 
-      />
-    ))}
-
+      <header className="header"></header>
+      <div className="jobs-container">
+        {jobs.map((job) => (
+          <JobCard key={job.id} job={job} />
+        ))}
+      </div>
     </>
   )
 }

@@ -1,0 +1,18 @@
+.header {
+   width: 100%;
+   height: 160px;
+  background-image: url('https://mcdn.wallpapersafari.com/medium/29/73/4kTn7x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+}
+
+.jobs-container {
+  background-color: rgb(236,244,244);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+}
