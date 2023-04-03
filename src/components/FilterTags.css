@@ -8,11 +8,12 @@
   gap: 4px;
   justify-content: start;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
-
   width: 600px;
   height: 40px;
   border-radius: 10px;
+
 }
 
 .filtered-tag {
@@ -44,4 +45,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.clear-btn {
+ background: none;
+ border: none;
+ font-weight: bolder;
+ color: rgb(113, 113, 113);
+ float: right;
+ position: absolute;
+ top: 0;
+ right: 0;
+ z-index: 1;
 }
