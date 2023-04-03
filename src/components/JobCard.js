@@ -1,8 +1,18 @@
 import React from 'react'
 import "./JobCard.css"
+import { useContext } from 'react'
+import { FilterContext } from '../components/createContext';
 
 const JobCard = ( {job} ) => {
+const { filters, addFilter, removeFilter } = useContext(FilterContext)
 
+const handleClick = (filter) => {
+  if (filters.includes(filter)) {
+    removeFilter(filter)
+  } else {
+    addFilter(filter)
+  }
+}
   return (
     <div className="job-card">
       <img className="logo" src={job.logo} alt={job.company} />
@@ -22,20 +32,42 @@ const JobCard = ( {job} ) => {
           <div className="horizontal-line"></div>
         </div>
         <div className="filter-tags">
-          <button className="filter-tag" type="button">
+          <button
+            className={`filter-tag ${
+              filters.includes(job.role) ? 'active' : ''
+            }`}
+            onClick={() => handleClick(job.role)}
+          >
             {job.role}
           </button>
-          <button className="filter-tag" type="button">
+          <button
+            className={`filter-tag ${
+              filters.includes(job.level) ? 'active' : ''
+            }`}
+            onClick={() => handleClick(job.level)}
+          >
             {job.level}
           </button>
-          {job.languages.map((language, index) => (
-            <button className="filter-tag" type="button">
+          {job.languages.map((language) => (
+            <button
+              className={`filter-tag ${
+                filters.includes(language) ? 'active' : ''
+              }`}
+              onClick={() => handleClick(language)}
+              key={language}
+            >
               {language}
             </button>
           ))}
           {job.tools &&
-            job.tools.map((tool, index) => (
-              <button className="filter-tag" type="button">
+            job.tools.map((tool) => (
+              <button
+                className={`filter-tag ${
+                  filters.includes(tool) ? 'active' : ''
+                }`}
+                onClick={() => handleClick(tool)}
+                key={tool}
+              >
                 {tool}
               </button>
             ))}
@@ -45,4 +77,4 @@ const JobCard = ( {job} ) => {
   )
 }
 
-export default JobCard
+export default JobCard;
