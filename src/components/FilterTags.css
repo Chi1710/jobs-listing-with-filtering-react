@@ -13,6 +13,7 @@
   width: 600px;
   height: 40px;
   border-radius: 10px;
+  justify-content: space-between;
 
 }
 
@@ -25,9 +26,15 @@
   border-radius: 4px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  
   gap:10px;
+}
+.filters-part {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
 }
 
 .close {
@@ -52,9 +59,5 @@
  border: none;
  font-weight: bolder;
  color: rgb(113, 113, 113);
- float: right;
- position: absolute;
- top: 0;
- right: 0;
- z-index: 1;
+
 }

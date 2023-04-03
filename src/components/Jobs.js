@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Jobs.css'
 import JobCard from './JobCard'
 import axios from 'axios'
-import { FilterContext } from '../components/createContext'
 import FilterTags from './FilterTags'
 
 const Jobs = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [jobs, setJobs] = useState([])
   const [error, setError] = useState('')
-  const { filters } = useContext(FilterContext)
+  const [filters, setFilters] = useState([])
 
   useEffect(() => {
     axios
@@ -24,6 +23,14 @@ const Jobs = () => {
       })
   }, [])
 
+  const handleFilter = (tag) => {
+    if (filters.includes(tag)) {
+      setFilters(filters.filter((filter) => filter !== tag))
+    } else {
+      setFilters([...filters, tag])
+    }
+  }
+
   const filteredJobs = jobs.filter((job) => {
     const jobTags = [
       job.role,
@@ -37,7 +44,7 @@ const Jobs = () => {
   return (
     <>
       <header className="header">
-        <FilterTags />
+        <FilterTags filters={filters} handleFilter={handleFilter} />
       </header>
       <div className="jobs-container">
         {filteredJobs.length === 0 ? (
