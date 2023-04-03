@@ -3,12 +3,12 @@ import './Jobs.css'
 import JobCard from './JobCard'
 import axios from 'axios'
 import { FilterContext } from '../components/createContext'
+import FilterTags from './FilterTags'
 
 const Jobs = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [jobs, setJobs] = useState([])
   const [error, setError] = useState('')
-
   const { filters } = useContext(FilterContext)
 
   useEffect(() => {
@@ -24,13 +24,6 @@ const Jobs = () => {
       })
   }, [])
 
-  if (isLoading) {
-    return <h2> Loading... </h2>
-  }
-  if (error) {
-    return <h2>{error}</h2>
-  }
-
   const filteredJobs = jobs.filter((job) => {
     const jobTags = [
       job.role,
@@ -43,7 +36,9 @@ const Jobs = () => {
 
   return (
     <>
-      <header className="header"></header>
+      <header className="header">
+        <FilterTags />
+      </header>
       <div className="jobs-container">
         {filteredJobs.length === 0 ? (
           <p>No jobs found.</p>

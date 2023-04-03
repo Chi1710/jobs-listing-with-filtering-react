@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  background-color: rgb(236,244,244);
 }
 .header {
    width: 100%;
