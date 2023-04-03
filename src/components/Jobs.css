@@ -8,6 +8,10 @@ body {
   background-image: url('https://mcdn.wallpapersafari.com/medium/29/73/4kTn7x.png');
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-bottom: -20px;
  
 }
 

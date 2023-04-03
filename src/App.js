@@ -1,6 +1,6 @@
 import React from 'react';
 import Jobs from './components/Jobs';
-import Filter from './components/Filter';
+
 import Footer from './components/Footer';
 import { useState } from 'react'
 import { FilterContext } from './components/createContext'
