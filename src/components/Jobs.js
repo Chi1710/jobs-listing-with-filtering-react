@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './Jobs.css'
 import JobCard from './JobCard'
 import axios from 'axios'
 import FilterTags from './FilterTags'
+import { FilterContext } from './createContext'
 
 const Jobs = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [jobs, setJobs] = useState([])
   const [error, setError] = useState('')
-  const [filters, setFilters] = useState([])
+
+  const { filters } = useContext(FilterContext)
 
   useEffect(() => {
     axios
@@ -24,22 +26,19 @@ const Jobs = () => {
   }, [])
 
   const handleFilter = (tag) => {
-    if (filters.includes(tag)) {
-      setFilters(filters.filter((filter) => filter !== tag))
-    } else {
-      setFilters([...filters, tag])
-    }
   }
 
-  const filteredJobs = jobs.filter((job) => {
-    const jobTags = [
-      job.role,
-      job.level,
-      ...job.languages,
-      ...(job.tools || []),
-    ]
-    return filters.length === 0 || jobTags.some((tag) => filters.includes(tag))
-  })
+
+const filteredJobs = jobs.filter((job) => {
+  const jobTags = [
+    job.role,
+    job.level,
+    ...job.languages,
+    ...(job.tools || []),
+  ];
+  return filters.length === 0 || filters.every((filter) => jobTags.includes(filter));
+});
+
 
   return (
     <>
