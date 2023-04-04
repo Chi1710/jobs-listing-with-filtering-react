@@ -36,7 +36,6 @@ const filteredJobs = jobs.filter((job) => {
   return filters.length === 0 || filters.every((filter) => jobTags.includes(filter));
 });
 
-
   return (
     <>
       <header className="header">

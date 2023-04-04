@@ -4,14 +4,11 @@ import { useContext } from 'react'
 import { FilterContext } from '../components/createContext';
 
 const JobCard = ( {job} ) => {
-const { filters, addFilter, removeFilter } = useContext(FilterContext)
+const { filters, addFilter } = useContext(FilterContext);
+//-- Handle Click from every tag. Calls addFilter created in Context.
 
 const handleClick = (filter) => {
-  if (filters.includes(filter)) {
-    removeFilter(filter)
-  } else {
     addFilter(filter)
-  }
 }
   return (
     <div className="job-card">
