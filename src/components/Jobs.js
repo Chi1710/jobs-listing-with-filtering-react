@@ -1,43 +1,53 @@
-import React, {useState, useEffect} from 'react'
-import "./Jobs.css"
+import React, { useState, useEffect, useContext } from 'react'
+import './Jobs.css'
 import JobCard from './JobCard'
-import axios from "axios";
-
-
+import axios from 'axios'
+import FilterTags from './FilterTags'
+import { FilterContext } from './createContext'
 
 const Jobs = () => {
-  const[isLoading, setIsLoading] = useState(true);
-  const [jobs, setJobs] = useState([]);
-  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true)
+  const [jobs, setJobs] = useState([])
+  const [error, setError] = useState('')
+//-- Take filters array from the Context created.
+  const { filters } = useContext(FilterContext)
 
-  useEffect( () => {
+  useEffect(() => {
     axios
-    .get("data.json")
-    .then(result => {
-      setJobs(result.data)
-      setIsLoading(false)
-    }).catch(error => {
-      setError(error.message)
-      setIsLoading(false)
-    })
+      .get('data.json')
+      .then((result) => {
+        setJobs(result.data)
+        setIsLoading(false)
+      })
+      .catch((error) => {
+        setError(error.message)
+        setIsLoading(false)
+      })
   }, [])
 
-  if(isLoading){
-    return <h2> Loading... </h2>
-  }
-  if(error){
-    return <h2>{error}</h2>
-  }
+//-- Create new Array that filters the jobs. For each job, creates an array (jobTags) with the tags of that job, and then returns all the elements in the filters array that has the filter
+const filteredJobs = jobs.filter((job) => {
+  const jobTags = [
+    job.role,
+    job.level,
+    ...job.languages,
+    ...(job.tools || []),
+  ]
+  return filters.length === 0 || filters.every((filter) => jobTags.includes(filter));
+});
 
   return (
     <>
-    <h1>Jobs</h1>
-    {jobs.map( (job) => (
-      <JobCard key={job.id}
-                job={job} 
-      />
-    ))}
-
+      <header className="header">
+        <FilterTags />
+      </header>
+      <div className="jobs-container">
+        {filteredJobs.length === 0 ? (
+          <p>No jobs found.</p>
+        ) : (
+          filteredJobs.map((job) => <JobCard key={job.id} job={job} />)
+        )}
+      </div>
     </>
   )
 }

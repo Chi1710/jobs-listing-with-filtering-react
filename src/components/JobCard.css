@@ -1,0 +1,145 @@
+.job-card {
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  height: auto;
+  border-left: 4px solid rgb(91,164,164);
+  padding: 20px;
+  box-shadow: 0 5px 30px 10px hsl(180, 29%, 50%, .2);
+}
+
+.logo {
+  width: 60px;
+  margin-top: -20%;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-company {
+  display: flex;
+  gap: 15px;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: rgb(91,164,164);
+}
+
+.label {
+  background-color:  rgb(91,164,164);
+  font-size: 0.6rem;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.featured {
+  background-color:rgb(44,58,58) ;
+}
+
+.job-position {
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.job-position:hover {
+  color:  rgb(91,164,164);
+}
+
+.job-conditions {
+  display: flex;
+  gap: 30px;
+  color: rgb(125,143,144);
+  font-size: .8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.job-conditions li:first-child {
+  list-style: none;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgb(125,143,144);
+}
+
+.filter-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-tag {
+  border: none;
+  background-color: rgb(238,246,246);
+  color:  rgb(91,164,164);
+  font-family: 'Spartan', sans-serif;
+  border-radius: 5px;
+  padding: 8px;
+  max-height: 40px;
+}
+
+.filter-tag:hover {
+  color:  rgb(238,246,246);
+  background-color:  rgb(91,164,164)
+}
+
+@media (min-width: 768px) {
+  .container-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .job-card {
+  display: flex;
+  gap: 20px;
+}
+
+.horizontal-line {
+  display: none;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-top: 2%;
+}
+
+ .filter-tags {
+  max-width: 300px;
+    margin-left: 50px;
+    justify-content: end;
+    align-items: start;
+}
+
+@media (min-width: 1000px) {
+.job-card {
+  width: 70%;
+}
+ .container-div {
+   gap:50px;
+   width: 100%;
+  }
+
+@media (min-width: 1400px) {
+  .job-card {
+  width: 60%;
+}
+.filter-tags {
+  max-width: 200px;
+    margin-left: 50px;
+    justify-content: end;
+    align-items: end;
+}
+}
+}
+}
