@@ -3,8 +3,13 @@ import { FilterContext } from './createContext';
 import { useContext } from 'react';
 import './FilterTags.css';
 import { IoClose } from 'react-icons/io5'
+
 const FilterTags = () => {
-  const { filters, removeFilter } = useContext(FilterContext)
+  const { filters, removeFilter } = useContext(FilterContext);
+
+  const handleClick = (filter) => {
+    removeFilter(filter)
+  }
   return (
     <>
       {filters.length > 0 && (
@@ -13,9 +18,9 @@ const FilterTags = () => {
             {filters.map((filter) => (
               <div className="filtered-tag" key={filter}>
                 <p className="filtered">{filter}</p>
-                <span className="close">
+                <button className="close" onClick = {() => {handleClick(filter)}}>
                   <IoClose />
-                </span>
+                </button>
               </div>
             ))}
           </div>

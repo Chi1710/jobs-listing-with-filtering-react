@@ -11,8 +11,12 @@ function App() {
      setFilters([...filters, filter])
    }
  }
+const removeFilter = (filter) => {
+  setFilters(filters.filter(filters => filters !== filter))
+} 
+
   return (
-    <FilterContext.Provider value={{ filters, addFilter}}>
+    <FilterContext.Provider value={{ filters, addFilter, removeFilter}}>
      <Jobs />
     </FilterContext.Provider>
   )
