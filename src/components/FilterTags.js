@@ -5,7 +5,7 @@ import './FilterTags.css';
 import { IoClose } from 'react-icons/io5'
 
 const FilterTags = () => {
-  const { filters, removeFilter } = useContext(FilterContext);
+  const { filters, removeFilter, clearFilter } = useContext(FilterContext);
 
   const handleClick = (filter) => {
     removeFilter(filter)
@@ -25,7 +25,7 @@ const FilterTags = () => {
             ))}
           </div>
           <div className="button-container">
-            <button type="button" className="clear-btn">
+            <button type="button" className="clear-btn" onClick = { () => clearFilter()}>
               Clear
             </button>
           </div>
