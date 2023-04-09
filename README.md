@@ -147,8 +147,8 @@ npx eslint "**/*.{js,jsx}"
 
 👤 **Andrea Rivas**
 
-- GitHub: [@Ilic](https://github.com/rivasbolinga)
-- LinkedIn: [@Ilic] (https://www.linkedin.com/in/andrearivaspalacios/)
+- GitHub: [rivasbolinga](https://github.com/rivasbolinga)
+- LinkedIn: [Andrea Rivas](https://www.linkedin.com/in/andrearivaspalacios/)
 
 
 👤 **Chi Yan Tse**
