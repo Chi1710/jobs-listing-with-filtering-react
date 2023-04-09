@@ -33,10 +33,8 @@
     - [Usage](#usage)
     - [Run tests](#run-project)
   - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
   - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -168,9 +166,3 @@ If you like this project, please don't forget to follow us and give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
