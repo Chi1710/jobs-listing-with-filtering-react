@@ -99,7 +99,7 @@ In order to run this project you need:
 
 
 ```
-git clone https://github.com/rivasbolinga/redux-toolkit.git
+git clone git@github.com:Chi1710/jobs-listing-with-filtering-react.git
 ```
 
 - [ ] Open the file in your code editor
@@ -114,10 +114,6 @@ Install this project with:
 npm install
 ```
 
-###  Instal linters for React and Redux:
-
-Here the link to install your linters: https://github.com/microverseinc/linters-config
-
 <!-- USAGE -->
 
 ### Usage
@@ -125,20 +121,8 @@ To run the project, execute the following command:
 
 ```
 npm start
-```
-<!-- RUN TESTS -->
+`
 
-###  Run tests
-
-To run Stylelint and ESLint tests, run the following commands respectively:
-
-```
-npx stylelint "**/*.{css,scss}"
-```
-
-```
-npx eslint "**/*.{js,jsx}"
-```
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
