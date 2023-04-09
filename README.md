@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can see the live version 📍 [here](https://space-travel-hub-react-redux.netlify.app/)
+You can see the live version 📍 [here](https://jobs-listing-chi-andrea.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
