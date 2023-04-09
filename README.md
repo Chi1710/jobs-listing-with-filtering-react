@@ -1,19 +1,10 @@
-<div align="center">
-  <img
-          alt="world glove icon"
-          src="https://user-images.githubusercontent.com/103900838/227566312-0ecb18dc-64b8-4bb4-948d-ecdd8a540638.png"
-          width="140"  height="auto" 
-        />
-  <br/>
+
   
 # 🔍 JOBS LISTING  <a name="about-project"></a>
 
  <a name="about-project"></a>
 <!-- PROJECT DESCRIPTION -->
 **Jobs listing** is a user-friendly website that displays a comprehensive list of job openings along with their relevant details. This platform offers the convenience of sorting through each job posting by its associated tag, and allows users to easily remove or clear any applied filters. It was developed as part of a collaborative project under the Front End Mentor curriculum.
-
-![laptop](https://user-images.githubusercontent.com/103900838/227567521-4a59b1d3-e582-4898-b1c6-004629c40ce4.png)
-
 </div>
 
 <a name="readme-top"></a>
