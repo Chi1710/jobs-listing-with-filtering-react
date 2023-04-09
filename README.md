@@ -153,8 +153,8 @@ npx eslint "**/*.{js,jsx}"
 
 👤 **Chi Yan Tse**
 
-- GitHub: [@Ilic](https://github.com/rivasbolinga)
-- LinkedIn: [@Ilic] (https://www.linkedin.com/in/andrearivaspalacios/)
+- GitHub: [Chi1710](https://github.com/Chi1710)
+- LinkedIn:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
