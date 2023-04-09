@@ -22,7 +22,6 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-    - [Run tests](#run-project)
   - [👥 Authors ](#-authors-)
   - [⭐️ Show your support ](#️-show-your-support-)
 
