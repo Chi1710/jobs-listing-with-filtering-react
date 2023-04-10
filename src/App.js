@@ -13,10 +13,14 @@ function App() {
  }
 const removeFilter = (filter) => {
   setFilters(filters.filter(filters => filters !== filter))
-} 
+}
+
+const clearFilter = () => {
+  setFilters([])
+}
 
   return (
-    <FilterContext.Provider value={{ filters, addFilter, removeFilter}}>
+    <FilterContext.Provider value={{ filters, addFilter, removeFilter, clearFilter}}>
      <Jobs />
     </FilterContext.Provider>
   )
