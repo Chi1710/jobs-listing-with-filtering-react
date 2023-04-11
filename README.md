@@ -129,7 +129,7 @@ npm start
 👤 **Chi Yan Tse**
 
 - GitHub: [Chi1710](https://github.com/Chi1710)
-- LinkedIn:
+- LinkedIn:  [chiyantse](https://www.linkedin.com/in/chiyantse/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
